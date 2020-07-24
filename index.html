@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aprender el Dom</title>
+    <link rel="stylesheet" href="">
+    
+    
+    <style>
+        
+        @font-face {
+            font-family: "blackjack";
+            src: url("fonts/1942.ttf");
+        }
+        @font-face {
+             font-family: "carta";
+            src: url("fonts/cards-webfont.woff");
+        }
+    
+        body {
+            font-family:"blacjack";
+            background-image: url(dados-h1.jpg);
+        }
+        h1{
+            background-color:black;
+            font-weight:5em;
+            color:white;
+            text-align:center;
+            
+            
+        }
+
+        #container{
+            width: 90%;
+            color:black;
+        }
+        
+        #botones {
+            display:inline;
+            
+        }
+        
+        #botones button {
+            background-color: chartreuse;
+            padding:
+            margin:20%;
+            margin-left: 20%;
+            
+                
+                 }
+        
+        #display {
+            font-size:40px;
+          background-color:black;
+            color:lime;
+            min-height: 100px;
+            text-align: center;
+        
+        
+        
+            
+        }
+        #tapete{
+          background-image: url(tapete.jpg);
+            color:black;
+            min-height: 500px; 
+         }
+        #croupier,#jugador{
+           display:inline-block;
+           width: 48%;
+           text-align:center;
+           margin-top:4em;
+           border-top-left-radius: 1em 5em;
+             }
+    
+    
+         
+        
+        @keyframes apareceCarta{
+            from{
+                top:-100px;
+                position:relatiive;
+                left:-100;
+                opacity:0;
+               }
+            
+           to {
+               top:0;
+               left:0;
+               opacity:1;
+               
+                }
+        }
+        
+         #tapete img{
+                     position:relative;
+                     animation:apareceCarta;
+                     animation-duration:5s;
+             
+                    } 
+        .cartalista{
+            width: 100px;
+        }
+        
+        
+      
+        
+    </style>
+</head>
+<body>
+ <h1> QUE COMIENZE EL JUEGO</h1>
+  
+  
+       <div id="container">
+       <div id="botones">
+       <button id="cartaA" type="button">Start</button>
+       <button  id="mostrarB" type="button">Mostrar Baraja</button>
+       </div>
+       
+       <div id="display">
+       <h1>Bienvenidos a nuestro juego virtual </h1>
+       <div class="carta" img src="cartas-fila.jpg width=20px"> </div>
+       </div> 
+
+
+         <div id="tapete">
+         
+         <div id="croupier"> 
+<!--              <img src='baraja-svg/10_of_clubs.svg'>  -->
+         </div>    
+
+         <div id="jugador"> 
+<!--             <img src='baraja-svg/2_of_clubs.svg'>       -->
+        </div>  
+      </div>
+      <div id="mostrarBaraja"> 
+      </div>
+    </div>
+    
+    <script src="biblioteca.js"></script>
+    <script src="baraja.js"></script>
+    <script src="croupier.js"></script>
+    <script src="jugador.js"></script>
+    <script src="carta-mas-alta.js"></script>
+     <script src="mostrar-baraja.js"></script>
+    
+</body>
+</html>
